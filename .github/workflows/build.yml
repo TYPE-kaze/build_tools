@@ -20,4 +20,11 @@ jobs:
           context: .
           file: ./Dockerfile
           push: false
-          tags: kaze/custom-onlyoffice:latest
+          tags: onlyoffice-documentserver-plain:latest
+          outputs: type=docker,dest=/tmp/my-image.tar
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: onlyoffice-documentserver-plain
+          path: /tmp/my-image.tar
