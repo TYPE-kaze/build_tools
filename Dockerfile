@@ -11,6 +11,6 @@ RUN apt-get -y update && \
                        curl
 
 ADD . /build_tools
-WORKDIR /build_tools
+RUN cd /build_tools && python3 ./automate.py server
 
-CMD ["sh", "-c", "cd tools/linux && python3 ./automate.py server"]
+CMD ["sh"]
