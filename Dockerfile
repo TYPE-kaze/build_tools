@@ -13,4 +13,4 @@ RUN apt-get -y update && \
 ADD . /build_tools
 WORKDIR /build_tools
 
-CMD ["sh", "-c", "cd tools/linux && python3 ./automate.py"]
+CMD ["sh", "-c", "cd tools/linux && python3 ./automate.py server"]
